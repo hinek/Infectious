@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/normal_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/title_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/button_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Success.gd" type="Script" id=4]
+
+[node name="Success" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 192.0
+margin_top = 56.0
+margin_right = 448.0
+margin_bottom = 104.0
+custom_fonts/font = ExtResource( 2 )
+text = "You did it"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+margin_left = 128.0
+margin_top = 152.0
+margin_right = 512.0
+margin_bottom = 219.0
+custom_fonts/font = ExtResource( 1 )
+text = "Congratulations on completing the game"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 176.0
+margin_top = 288.0
+margin_right = 464.0
+margin_bottom = 318.0
+custom_fonts/font = ExtResource( 3 )
+text = "Exit to start screen"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
